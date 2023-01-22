@@ -45,9 +45,7 @@ while True:
     #find contours
     countours, _ = cv2.findContours(closing, cv2.RETR_CCOMP, cv2.CHAIN_APPROX_SIMPLE)
     countours = sorted(countours, key=cv2.contourArea, reverse=True)[:30]
-    #countours = countours[0] #if len(countours) == 2 else countours[1]
-    #print("Countours: ", str(len(countours)))
-
+    
 
     #draw contours on the resized image
     resized_copy = resized.copy()
