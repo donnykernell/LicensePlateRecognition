@@ -2,7 +2,7 @@ import cv2
 import pytesseract
 import numpy as np
 
-3
+
 while True:
     choice = input("Enter number of the image (1-9): ")
     path = "test_images/car"+choice+".jpg"
