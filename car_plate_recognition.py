@@ -81,7 +81,7 @@ while True:
     if plate is not None:
 
         #for Windows this is required by installing Tesseract-OCR
-        pytesseract.pytesseract.tesseract_cmd = r"C:\\Users\\vdi-terminal\\AppData\\Local\\Programs\\Tesseract-OCR\\tesseract.exe"
+        #pytesseract.pytesseract.tesseract_cmd = r"{Your Tesseract-OCR directory}"
 
         #recognize the characters on the license plate
         config = ('-l eng --oem 1 --psm 8 -c tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTVWUYXZ0123456789')
