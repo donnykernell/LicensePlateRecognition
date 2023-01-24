@@ -6,7 +6,7 @@ WORKDIR /app
 
 #Download the english language data
 RUN apt-get update && apt-get install -y git
-RUN apt-get install -y tesseract-ocr tesseract-ocr-dev tesseract-ocr-script-latn tesseract-ocr-script-latn-dev tesseract-ocr-script-latn-frak tesseract-ocr-script-latn-frak-dev
+RUN apt-get install -y tesseract-ocr 
 
 #Copy repo
 RUN git clone https://github.com/donnykernell/LicensePlateRecognition.git
