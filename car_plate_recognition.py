@@ -82,7 +82,7 @@ while True:
         #pytesseract.pytesseract.tesseract_cmd = r"{Your Tesseract-OCR directory}"
 
         #recognize the characters on the license plate
-        config = ('-l eng --oem 1 --psm 7 -c tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTVWUYXZ0123456789')
+        config = ('-l eng --oem 1 --psm 6 -c tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTVWUYXZ0123456789')
         text = pytesseract.image_to_string(plate_image, config=config)
         
         print("==============License Plate================")
