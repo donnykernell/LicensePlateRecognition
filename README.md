@@ -17,24 +17,32 @@ The project can be installed using pip and the requirements.txt file:
 Copy code
 
 pip install -r requirements.txt
+
+
 Running the script
 To run the script, simply execute the following command:
 
 Copy code
 
-python license_plate_recognition.py
+python car_plate_recognition.py
+
+
 Docker support
 A Dockerfile is provided to build an image of the project, including all the necessary dependencies.
+
+
 To build the image use:
 
 Copy code
 
 docker build -t <image_name> .
+
+
 To run the container:
 
 Copy code
 
-docker run <image_name>
+docker run --rm -ti --net=host --ipc=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $XAUTHORITY:/tmp/.XAuthority -e XAUTHORITY=/tmp/.XAuthority --env="QT_X11_NO_MITSHM=1" <image_name>
 
 Contributing
 
